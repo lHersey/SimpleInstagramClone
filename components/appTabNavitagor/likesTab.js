@@ -1,11 +1,18 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { Icon } from "native-base";
 
-class mainScreen extends Component {
+class likesTab extends Component {
+  static navigationOptions = {
+    tabBarIcon: ({ tintColor }) => (
+      <Icon name="ios-heart" style={{ color: tintColor }} />
+    )
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>mainScreen</Text>
+        <Text>likesTab</Text>
       </View>
     );
   }
@@ -14,10 +21,9 @@ class mainScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center"
   }
 });
 
-export default mainScreen;
+export default likesTab;
